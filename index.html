@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glass Clock</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="orb" style="top: 14%; left: 8%; width: 320px; height: 320px; background: #f59e0b; animation-delay: 0s;"></div>
+  <div class="orb" style="top: 52%; left: 70%; width: 360px; height: 360px; background: #22d3ee; animation-delay: 5s;"></div>
+  <div class="orb" style="top: 78%; left: 14%; width: 240px; height: 240px; background: #fb923c; animation-delay: 9s;"></div>
+
+  <main class="card" role="region" aria-label="Clock">
+    <div class="clock-grid">
+      <div class="time-left">
+        <div class="greeting" id="greeting">Good morning</div>
+        <div class="time" id="clock" aria-label="Current time">
+          <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds" class="seconds">00</span>
+        </div>
+        <div class="period" id="period">AM</div>
+        <div class="date" id="date"></div>
+      </div>
+      <div class="dial-wrap">
+        <div class="dial" id="dial" aria-hidden="true">
+          <div class="hand" id="secondHand"></div>
+          <div class="center-dot"></div>
+        </div>
+      </div>
+    </div>
+    <div class="toggle-wrap">
+      <div class="segmented" role="radiogroup" aria-label="Time format">
+        <button type="button" class="segment active" data-format="24" aria-pressed="true" role="radio">24</button>
+        <button type="button" class="segment" data-format="12" aria-pressed="false" role="radio">12</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
